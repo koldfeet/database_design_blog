@@ -1,0 +1,51 @@
+.center-short-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.short-line {
+    width: 60%;
+}
+
+/* header start================ */
+
+.header-col-left {
+    min-width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* header end=================== */
+
+/* section start=================== */
+.section-col-left,
+.section-col-right {
+    padding: 5px;
+    min-width: 300px;
+}
+
+.section-col-left {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.section-col-right {
+    background-color: lightcoral;
+    flex-basis: 30%;
+}
+
+.my-h2 {
+    font-size: 18px;
+}
+
+.my-h3 {
+    font-size: 15px;
+}
+
+/* section end=================== */
