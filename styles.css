@@ -28,7 +28,7 @@
 }
 
 .sidebar {
-    position: fixed;
+    /* position: fixed; */
     flex: 1 1 0;
     max-width: 250px;
     padding: 30px 30px;
@@ -203,5 +203,6 @@
 .center-my-h3 {
     text-align: center;
 }
+
 
 /* section end=================== */
