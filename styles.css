@@ -9,7 +9,16 @@
     width: 60%;
 }
 
+.short-short-line {
+    width: 40%;
+    height: 2px;
+}
+
 /* header start================ */
+
+.logo {
+    margin: 10px;
+}
 
 .header-col-left {
     min-width: 300px;
@@ -22,30 +31,17 @@
 /* header end=================== */
 
 /* section start=================== */
-.section-col-left,
-.section-col-right {
-    padding: 5px;
-    min-width: 300px;
-}
-
-.section-col-left {
-    background-color: lightblue;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.section-col-right {
-    background-color: lightcoral;
-    flex-basis: 30%;
-}
 
 .my-h2 {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .my-h3 {
-    font-size: 15px;
+    font-size: 18px;
+}
+
+.center-my-h2 {
+    text-align: center;
 }
 
 /* section end=================== */
