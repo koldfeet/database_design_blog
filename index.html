@@ -16,164 +16,218 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="logo">
-                    <h1>Database-Blog</h1>
-                </div>
+    <!-- ===============side nav bar start=============== -->
 
-                <hr>
+    <div class="main-section">
+        <div class="toggle">
+            <div class="hamburger">
+                <span></span>
             </div>
         </div>
-    </header>
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <nav class="navbar">
+                <a href="#data-modeling">Six Step To Design Database</a>
+                <a href="#">Under Contruction</a>
+                <a href="#">Under Contruction</a>
+                <a href="#">Under Contruction</a>
+                <a href="#">Under Contruction</a>
+            </nav>
+        </div>
+        <div class="content">
+            <header>
+                <div class="container">
+                    <div class="row">
+                        <div class="logo">
+                            <h1>Database-Blog</h1>
+                        </div>
 
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col section-col-right">
-                    <div class="center-my-h2">
-                        <h2>Data Modeling Using the ER Model</h2>
-                    </div> <br><br>
-                    <div class="center-my-h3">
-                        <h3 class="my-h3">Step 1: What Is Your Purpose?</h3>
-                    </div><br>
-                    <p>
-                        The first place to start when learning how to design a database is to work out what the purpose
-                        is.<br><br>
-                        Why are you designing a database? No, this isn’t just because someone told you do, or because
-                        your software needs it. What is the aim of the database? What is it storing?<br><br>
-                        Thinking about the aim of the database for the first step will help you make decisions about it
-                        later on. Some examples of database purposes are:
-                    <ul>
-                        <li>Storing customer transactions on your website</li>
-                        <li>Storing definitions of teams and players</li>
-                        <li>Storing reference data for your website</li>
-                    </ul>
-
-                    <strong>Lastly:</strong>
-                    Sure, it’s possible for a database to store a large amount of different kinds of information, but if
-                    you start with the purpose, it will make this process easier.
-                    </p>
-
-                    <div class="center-short-line">
-                        <hr class="short-short-line">
+                        <hr>
                     </div>
-                    <div class="center-my-h3">
-                        <h3 class="my-h3">Step 2: List What You’re Storing Data About</h3>
-                    </div><br>
-                    <p>
-                        Alright, so you’ve got your purpose. Now it’s time to decide what it’s going to store.
-                        <br><br>
-                        This is where we go into a little more detail on the database. To give an example, let’s say
-                        we’re creating a database <strong>to store customer transactions on your website that sells
-                            books</strong>
-                    <ul>
-                        <li> <strong>Books- </strong> What books we have for sale</li>
-                        <li> <strong>Customers-</strong> Who our customers are</li>
-                        <li> <strong>Sales-</strong> A list of sales of these books</li>
-                    </ul>
-                    To keep it simple, I won’t include other possibilities such as promotions or authors or anything.
-                    Write this list as a list of “items”. See how I’ve used “books, customers, sales” above?<br><br>
-
-                    Also, make them plural. It’s easier to think of what to store data about if you think of plural.
-                    This could be because each row in a table represents one of these items, and a table contains many
-                    of them.
-                    </p>
-
-                    <div class="center-short-line">
-                        <hr class="short-short-line">
-                    </div>
-                    <div class="center-my-h3">
-                        <h3 class="my-h3">Step 3: Define The Attributes</h3>
-                    </div><br>
-                    <p>
-                        Now we have our list of items, or tables, that we’re storing data about. The next step is to
-                        decide what to store about each of these.<br><br>
-                        Think about what you need to know about each of these items. What would people want to know?
-                        What do you want to know? What represents these items?<br><br>
-                        We can use the book database again. Using these tables, I can list several attributes:
-                    <ul>
-                        <li>Books – title, author, price</li>
-                        <li>Customers – first name, last name, address</li>
-                        <li>Sales – sale date, customer, book, price</li>
-                    </ul>
-                    This is another simplification of a real database, but it explains the point. As shown above, the
-                    “books” table would need a few attributes. For each book, we need to know the
-                    <strong>title</strong>, the <strong>author</strong>, and
-                    the <strong>price</strong> of the book. These will become attributes, or columns, in the table.
-                    </p>
-
-                    <div class="center-short-line">
-                        <hr class="short-short-line">
-                    </div>
-                    <div class="center-my-h3">
-                        <h3 class="my-h3">Step 4: Develop The Relationships</h3>
-                    </div><br>
-                    <p>
-                        We have our tables with our columns, or attributes. At the moment, they are just tables, sitting
-                        by themselves. To make them work, we need to link them together.<br><br>
-                        This is what a relationship is. No, I’m not talking about dating, I’m talking about a link
-                        between two tables in a database!<br><br>
-                        A relationship is a <strong>link between two related tables in a database that defines how the
-                            data is
-                            structured</strong>. Mostly, they represent real world scenarios.<br><br>
-                    </p>
-
-                    <div class="center-short-line">
-                        <hr class="short-short-line">
-                    </div>
-                    <div class="center-my-h3">
-                        <h3 class="my-h3">Step 5: Decide On A Unique Identifier</h3>
-                    </div><br>
-                    <p>
-                        Each table in a database needs to have a unique identifier. This is a column that can be used to
-                        identify this row and only this row. This is often called a primary key. It’s done as part of
-                        the normalisation process of a database.<br><br>
-                        The simplest way to do this is to add an attribute to each table to identify it (we could use
-                        concepts called “surrogate keys” or “composite keys”, but to keep it simple, let’s stick to a
-                        single new column). I like to use the name of the table with the letters ID at the end of
-                        it.<br><br>
-                        For each of our tables, we can add the following attributes.
-                    <ul>
-                        <li>Books – title, author, price, book ID</li>
-                        <li>Customers – first name, last name, address, customer ID</li>
-                        <li>Sales – sale date, customer, book, price, sale ID</li>
-                    </ul>
-                    I’ve underlined the new fields, as this is the convention for indicating these identifying
-                    attributes. Learning how to design a database means learning these little things as well.
-                    </p>
-
-                    <div class="center-short-line">
-                        <hr class="short-short-line">
-                    </div>
-                    <div class="center-my-h3">
-                        <h3 class="my-h3">Step 6: Include The Identifiers In Each Table</h3>
-                    </div>
-                    <p>
-                        Now, we need to go back to our relationships, and learn how to link them. They are linked using
-                        these new ID fields we created, and these ID fields need to be in both tables.<br><br>
-                        The “has many” sentences we created before can be used to structure our tables. As mentioned
-                        before, I have two of the “has many” statements and three tables.
-                    <ul>
-                        <li>A book has MANY sales</li>
-                        <li>A customer has MANY sales</li>
-                    </ul>
-                    What does this mean? It means that for each sale record, it has one book. It means that each book
-                    can have many sales.<br><br>
-                    To identify this relationship, we need to add the ID from one table into the other. Can we add the
-                    sale ID into the books table? We can’t because this would mean we can only store one sale ID for a
-                    book, and a book has many sales.
-                    </p>
                 </div>
+            </header>
+
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col section-col-right">
+                            <div class="center-my-h2">
+                                <h2 id="data-modeling">Data Modeling Using the ER Model</h2>
+                            </div> <br><br>
+                            <div class="center-my-h3">
+                                <h3 class="my-h3">Step 1: What Is Your Purpose?</h3>
+                            </div><br>
+                            <p>
+                                The first place to start when learning how to design a database is to work out what the
+                                purpose
+                                is.<br><br>
+                                Why are you designing a database? No, this isn’t just because someone told you do, or
+                                because
+                                your software needs it. What is the aim of the database? What is it storing?<br><br>
+                                Thinking about the aim of the database for the first step will help you make decisions
+                                about it
+                                later on. Some examples of database purposes are:
+                            <ul>
+                                <li>Storing customer transactions on your website</li>
+                                <li>Storing definitions of teams and players</li>
+                                <li>Storing reference data for your website</li>
+                            </ul>
+
+                            <strong>Lastly:</strong>
+                            Sure, it’s possible for a database to store a large amount of different kinds of
+                            information, but if
+                            you start with the purpose, it will make this process easier.
+                            </p>
+
+                            <div class="center-short-line">
+                                <hr class="short-short-line">
+                            </div>
+                            <div class="center-my-h3">
+                                <h3 class="my-h3">Step 2: List What You’re Storing Data About</h3>
+                            </div><br>
+                            <p>
+                                Alright, so you’ve got your purpose. Now it’s time to decide what it’s going to store.
+                                <br><br>
+                                This is where we go into a little more detail on the database. To give an example, let’s
+                                say
+                                we’re creating a database <strong>to store customer transactions on your website that
+                                    sells
+                                    books</strong>
+                            <ul>
+                                <li> <strong>Books- </strong> What books we have for sale</li>
+                                <li> <strong>Customers-</strong> Who our customers are</li>
+                                <li> <strong>Sales-</strong> A list of sales of these books</li>
+                            </ul>
+                            To keep it simple, I won’t include other possibilities such as promotions or authors or
+                            anything.
+                            Write this list as a list of “items”. See how I’ve used “books, customers, sales”
+                            above?<br><br>
+
+                            Also, make them plural. It’s easier to think of what to store data about if you think of
+                            plural.
+                            This could be because each row in a table represents one of these items, and a table
+                            contains many
+                            of them.
+                            </p>
+
+                            <div class="center-short-line">
+                                <hr class="short-short-line">
+                            </div>
+                            <div class="center-my-h3">
+                                <h3 class="my-h3">Step 3: Define The Attributes</h3>
+                            </div><br>
+                            <p>
+                                Now we have our list of items, or tables, that we’re storing data about. The next step
+                                is to
+                                decide what to store about each of these.<br><br>
+                                Think about what you need to know about each of these items. What would people want to
+                                know?
+                                What do you want to know? What represents these items?<br><br>
+                                We can use the book database again. Using these tables, I can list several attributes:
+                            <ul>
+                                <li>Books – title, author, price</li>
+                                <li>Customers – first name, last name, address</li>
+                                <li>Sales – sale date, customer, book, price</li>
+                            </ul>
+                            This is another simplification of a real database, but it explains the point. As shown
+                            above, the
+                            “books” table would need a few attributes. For each book, we need to know the
+                            <strong>title</strong>, the <strong>author</strong>, and
+                            the <strong>price</strong> of the book. These will become attributes, or columns, in the
+                            table.
+                            </p>
+
+                            <div class="center-short-line">
+                                <hr class="short-short-line">
+                            </div>
+                            <div class="center-my-h3">
+                                <h3 class="my-h3">Step 4: Develop The Relationships</h3>
+                            </div><br>
+                            <p>
+                                We have our tables with our columns, or attributes. At the moment, they are just tables,
+                                sitting
+                                by themselves. To make them work, we need to link them together.<br><br>
+                                This is what a relationship is. No, I’m not talking about dating, I’m talking about a
+                                link
+                                between two tables in a database!<br><br>
+                                A relationship is a <strong>link between two related tables in a database that defines
+                                    how the
+                                    data is
+                                    structured</strong>. Mostly, they represent real world scenarios.<br><br>
+                            </p>
+
+                            <div class="center-short-line">
+                                <hr class="short-short-line">
+                            </div>
+                            <div class="center-my-h3">
+                                <h3 class="my-h3">Step 5: Decide On A Unique Identifier</h3>
+                            </div><br>
+                            <p>
+                                Each table in a database needs to have a unique identifier. This is a column that can be
+                                used to
+                                identify this row and only this row. This is often called a primary key. It’s done as
+                                part of
+                                the normalisation process of a database.<br><br>
+                                The simplest way to do this is to add an attribute to each table to identify it (we
+                                could use
+                                concepts called “surrogate keys” or “composite keys”, but to keep it simple, let’s stick
+                                to a
+                                single new column). I like to use the name of the table with the letters ID at the end
+                                of
+                                it.<br><br>
+                                For each of our tables, we can add the following attributes.
+                            <ul>
+                                <li>Books – title, author, price, book ID</li>
+                                <li>Customers – first name, last name, address, customer ID</li>
+                                <li>Sales – sale date, customer, book, price, sale ID</li>
+                            </ul>
+                            I’ve underlined the new fields, as this is the convention for indicating these identifying
+                            attributes. Learning how to design a database means learning these little things as well.
+                            </p>
+
+                            <div class="center-short-line">
+                                <hr class="short-short-line">
+                            </div>
+                            <div class="center-my-h3">
+                                <h3 class="my-h3">Step 6: Include The Identifiers In Each Table</h3>
+                            </div>
+                            <p>
+                                Now, we need to go back to our relationships, and learn how to link them. They are
+                                linked using
+                                these new ID fields we created, and these ID fields need to be in both tables.<br><br>
+                                The “has many” sentences we created before can be used to structure our tables. As
+                                mentioned
+                                before, I have two of the “has many” statements and three tables.
+                            <ul>
+                                <li>A book has MANY sales</li>
+                                <li>A customer has MANY sales</li>
+                            </ul>
+                            What does this mean? It means that for each sale record, it has one book. It means that each
+                            book
+                            can have many sales.<br><br>
+                            To identify this relationship, we need to add the ID from one table into the other. Can we
+                            add the
+                            sale ID into the books table? We can’t because this would mean we can only store one sale ID
+                            for a
+                            book, and a book has many sales.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="center-short-line">
+                <hr class="short-line">
             </div>
         </div>
-    </section>
-
-    <div class="center-short-line">
-        <hr class="short-line">
     </div>
 
+    <!-- ===============side nav bar end=============== -->
+
+
+
+
+    <script src="app.js"></script>
 </body>
 
 </html>
