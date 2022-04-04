@@ -24,11 +24,12 @@
 
 .main-section {
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .sidebar {
-    /* position: fixed; */
+    position: fixed;
+    height: 100vh;
     flex: 1 1 0;
     max-width: 250px;
     padding: 30px 30px;
@@ -145,9 +146,9 @@
     .toggle {
         display: block;
     }
-    .content {
+    /* .content {
         padding-top: 130px;
-    }
+    } */
     .sidebar {
         position: fixed;
         top: 0;
@@ -182,9 +183,14 @@
 
 /* header end=================== */
 
-/* section start=================== */
-.logo {
-    text-align: center;
+/* col-right start ============== */
+.col-right {
+    flex-basis: 60%;
+    min-width: 400px;
+}
+
+.col-left {
+    min-width: 250px;
 }
 
 .my-h2 {
@@ -206,4 +212,4 @@
 .center-btn {
     text-align: center;
 }
-/* section end=================== */
+/* col-right end ============== */
