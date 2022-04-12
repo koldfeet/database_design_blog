@@ -33,7 +33,7 @@
                         <nav class="navbar">
                             <a href="#data-modeling">Six Step To Design Database</a>
                             <a href="#basic__sql">04 Basic SQL</a>
-                            <a href="#">Under Contruction</a>
+                            <a href="#normalization">06-Normalization</a>
                             <a href="#">Under Contruction</a>
                             <a href="#">Under Contruction</a>
                         </nav>
@@ -285,6 +285,75 @@
                                     </p>
                                     <p> <strong>Savepoint:</strong> Set a savepoint within a transaction. </p>
                                     <p> <strong>Set Transaction:</strong> specify characteristics for the transaction.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="center-short-line">
+                            <hr class="short-line">
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="center-my-h2">
+                                        <h2 id="normalization">06-Normalization</h2>
+                                    </div> <br>
+
+                                    <p>
+                                        According to Microsoft, normalization is the process of organizing data in a
+                                        database. This includes creating tables and establishing relationships between
+                                        those tables according to rules designed both to protect the data and to make
+                                        the database more flexible by eliminating redundancy and inconsistent
+                                        dependency.
+                                    </p>
+
+                                    <h3 class="my-h3">First normal form</h3>
+                                    <p>
+                                    <ul>
+                                        <li>Eliminate repeating groups in individual tables.</li>
+                                        <li>Create a separate table for each set of related data.</li>
+                                        <li>Identify each set of related data with a primary key.</li>
+                                    </ul>
+                                    Do not use multiple fields in a single table to store similar data. For example,
+                                    to track an inventory item that may come from two possible sources, an inventory
+                                    record may contain fields for Vendor Code 1 and Vendor Code 2.
+                                    </p>
+
+                                    <h3 class="my-h3">Second normal form</h3>
+                                    <p>
+                                    <ul>
+                                        <li>Create separate tables for sets of values that apply to multiple records.
+                                        </li>
+                                        <li>Relate these tables with a foreign key.</li>
+                                    </ul>
+                                    Records should not depend on anything other than a table's primary key (a compound
+                                    key, if necessary). For example, consider a customer's address in an accounting
+                                    system. The address is needed by the Customers table, but also by the Orders,
+                                    Shipping, Invoices, Accounts Receivable, and Collections tables. Instead of storing
+                                    the customer's address as a separate entry in each of these tables, store it in one
+                                    place, either in the Customers table or in a separate Addresses table.
+                                    </p>
+
+                                    <h3 class="my-h3">Third normal form</h3>
+                                    <p>
+                                    <ul>
+                                        <li>Eliminate fields that do not depend on the key.</li>
+                                    </ul>
+                                    Values in a record that are not part of that record's key do not belong in the
+                                    table. In general, anytime the contents of a group of fields may apply to more than
+                                    a single record in the table, consider placing those fields in a separate table.
+                                    </p>
+
+                                    <p>
+                                        For example, in an Employee Recruitment table, a candidate's university name and
+                                        address may be included. But you need a complete list of universities for group
+                                        mailings. If university information is stored in the Candidates table, there is
+                                        no way to list universities with no current candidates. Create a separate
+                                        Universities table and link it to the Candidates table with a university code
+                                        key.
                                     </p>
 
                                 </div>
